@@ -19,7 +19,7 @@ public class CampaignService {
 
     @Autowired
     @Qualifier("campaign")
-    private List<Campaign> campaignSet;
+    private Set<Campaign> campaignSet;
 
     public String getAssociatedSegments(String[] desiredSegments){
         desiredSegments = ignoreDuplicateElements(desiredSegments);

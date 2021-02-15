@@ -22,9 +22,9 @@ public class CampaignLoader {
     String filePath;
 
     @Bean(name = "campaign")
-    public List<Campaign> getCampaign() {
+    public Set<Campaign> getCampaign() {
 
-        List<Campaign> campaignSet = new ArrayList<>();
+        Set<Campaign> campaignSet = new LinkedHashSet<>();
 
         BufferedReader reader;
         try {

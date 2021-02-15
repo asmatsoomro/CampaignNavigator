@@ -26,6 +26,9 @@ e.g. localhost:8090/campaign/navigate?segments=15 9 21
 The test folder contains the unit tests.
 Right click on CampaignServiceTest to run unit tests.
 
+#Assumptions/Decisions
+With two or more segments containing equal number of matches, the last processed segment will be returned as a result
+
 #Author
 Asmat Soomro (soomro.asmat@gmail.com) is the sole author of the project.
 
