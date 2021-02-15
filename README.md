@@ -27,7 +27,7 @@ The test folder contains the unit tests.
 Right click on CampaignServiceTest to run unit tests.
 
 # Assumptions/Decisions
-With two or more segments containing equal number of matches, the last processed segment will be returned as a result
+With two or more segments containing equal number of matches, the load is balanced between different campaigns in a round robin method
 
 # Author
 Asmat Soomro (soomro.asmat@gmail.com) is the sole author of the project.
