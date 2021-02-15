@@ -34,9 +34,7 @@ public class CampaignLoader {
             StringBuffer sb=new StringBuffer();
             String line;
             while ((line = br.readLine()) != null) {
-                System.out.println(line);
-                // read next line
-                //line = reader.readLine();
+                logger.info(line);
                 String[] campaignTokens = line.split(" ");
                 Campaign campaign = new Campaign();
                 campaign.setName(campaignTokens[0]);
