@@ -3,12 +3,12 @@
 #Prerequisites
 You must have java 8 installed in your machine
 
-#Installing
+#Installation
 If you want to run with maven, please run mvn clean install and then in project home run 
-java -jar target/CampaignOrchestrator-0.0.1-SNAPSHOT.jar --file=<Location of your campaignFile> <DesiredCampaignList_seperated by spaces>
+java -jar target/CampaignNavigator-0.0.1-SNAPSHOT.jar --file=<Location of your campaignFile> <DesiredCampaignList_seperated_by_spaces>
   
 e.g:
-java -jar target/CampaignOrchestrator-0.0.1-SNAPSHOT.jar --file=/Users/asmatsoomro/Documents/Projects/CampaignOrchestrator/src/main/resources/input.txt "3" "4" "10"java -jar target/CampaignOrchestrator-0.0.1-SNAPSHOT.jar --file=/Users/asmatsoomro/Documents/Projects/CampaignOrchestrator/src/main/resources/input.txt "3" "4" "10"
+java -jar target/CampaignNavigator-0.0.1-SNAPSHOT.jar --file=/Users/asmatsoomro/Documents/Projects/CampaignNavigator/src/main/resources/input.txt "3" "4" "10"
 
 #Running in IDE
 Import the project in your favorite IDE, e.g intellij
@@ -16,6 +16,11 @@ Give the location of your campaign file in environment variables
 Provide your desired target campaign as command line arguments
 Run CampaignNavigator.java
 It will run your application on port 8090
+
+#Calling a REST Endpoint
+The application can also be executed using the rest endpoint.
+localhost:8030/campaign/navigate?segments=<Segments>
+e.g. localhost:8090/campaign/navigate?segments=15 9 21
 
 #Running the tests
 The test folder contains the unit tests.
