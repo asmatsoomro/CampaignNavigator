@@ -1,15 +1,12 @@
-package com.app.campaignNavigator.controller;
+package com.app.campaignnavigator.controller;
 
-import com.app.campaignNavigator.service.CampaignService;
+import com.app.campaignnavigator.service.CampaignService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-
-import java.io.IOException;
-import java.util.concurrent.ExecutionException;
 
 @RestController
 @RequestMapping("/campaign")
@@ -20,7 +17,7 @@ public class CampaignController {
     private CampaignService campaignService;
 
     @Autowired
-    public CampaignController(CampaignService campaignService){
+    public CampaignController(final CampaignService campaignService){
         this.campaignService = campaignService;
     }
 

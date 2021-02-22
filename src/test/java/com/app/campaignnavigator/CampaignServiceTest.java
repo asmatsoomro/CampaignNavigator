@@ -1,6 +1,6 @@
-package com.app.campaignNavigator;
+package com.app.campaignnavigator;
 
-import com.app.campaignNavigator.service.CampaignService;
+import com.app.campaignnavigator.service.CampaignService;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;

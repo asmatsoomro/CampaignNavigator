@@ -1,4 +1,4 @@
-package com.app.campaignNavigator;
+package com.app.campaignnavigator;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

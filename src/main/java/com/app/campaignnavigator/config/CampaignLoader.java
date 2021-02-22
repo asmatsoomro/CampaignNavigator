@@ -1,6 +1,6 @@
-package com.app.campaignNavigator.config;
+package com.app.campaignnavigator.config;
 
-import com.app.campaignNavigator.entity.Campaign;
+import com.app.campaignnavigator.entity.Campaign;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Value;
@@ -16,7 +16,7 @@ import java.util.*;
 @Configuration
 public class CampaignLoader {
 
-    private final static Logger logger = LoggerFactory.getLogger(CampaignLoader.class);
+    private static final Logger logger = LoggerFactory.getLogger(CampaignLoader.class);
 
     @Value("${file}")
     String filePath;
@@ -26,7 +26,7 @@ public class CampaignLoader {
 
         Set<Campaign> campaignSet = new LinkedHashSet<>();
 
-        BufferedReader reader;
+
         try {
             File file=new File(filePath);
             FileReader fr=new FileReader(file);
@@ -50,7 +50,7 @@ public class CampaignLoader {
             }
             fr.close();
         } catch (IOException e) {
-            e.printStackTrace();
+           logger.error(e.getLocalizedMessage());
         }
         return campaignSet;
 

@@ -1,6 +1,6 @@
-package com.app.campaignNavigator.service;
+package com.app.campaignnavigator.service;
 
-import com.app.campaignNavigator.entity.Campaign;
+import com.app.campaignnavigator.entity.Campaign;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -55,7 +55,7 @@ public class CampaignService {
 
 
         logger.info("max {}", max);
-        if (largestAssociatedSegment != NO_CAMPAIGN) {
+        if (!largestAssociatedSegment.equals(NO_CAMPAIGN)) {
             largestAssociatedSegment = balanceLoadBetweenCampaigns(maxCampaigns, largestAssociatedSegment);
         }
         return largestAssociatedSegment;
@@ -81,7 +81,7 @@ public class CampaignService {
     }
 
     // duplicate elements to be completely ignored, i.e. {"3", "5", "5"} -> {"3"}
-    public String[] ignoreDuplicateElements(String[] arr) {
+    private String[] ignoreDuplicateElements(String[] arr) {
         LinkedHashSet<String> linkedHashSet = new LinkedHashSet<>();
         for (int i = 0; i < arr.length; i++) {
             for (int j = i + 1; j < arr.length; j++) {
@@ -92,13 +92,12 @@ public class CampaignService {
                 }
             }
         }
-
-
-        for (int i = 0; i < arr.length; i++) {
-            if (arr[i] != null) {
-                linkedHashSet.add(arr[i]);
+        for (String strTemp : arr){
+            if (strTemp != null) {
+                linkedHashSet.add(strTemp);
             }
         }
+
         return linkedHashSet.toArray(new String[]{});
     }
 

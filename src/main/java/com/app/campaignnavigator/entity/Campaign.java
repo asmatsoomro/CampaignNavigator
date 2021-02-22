@@ -1,4 +1,4 @@
-package com.app.campaignNavigator.entity;
+package com.app.campaignnavigator.entity;
 
 import java.util.Arrays;
 import java.util.Objects;

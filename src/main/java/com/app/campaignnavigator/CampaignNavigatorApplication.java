@@ -1,6 +1,6 @@
-package com.app.campaignNavigator;
+package com.app.campaignnavigator;
 
-import com.app.campaignNavigator.service.CampaignService;
+import com.app.campaignnavigator.service.CampaignService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.boot.SpringApplication;
